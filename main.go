@@ -139,6 +139,21 @@ func main() {
 					"list all coins",
 				})
 			}
+		} else {
+			utils.PushMessage([]string{
+				"可用命令",
+				"",
+				"添加监控",
+				"add [COIN] [PRICE]",
+				"eg. add BTC_USDT <43000",
+				"",
+				"删除监控",
+				"del [COIN] [PRICE]",
+				"eg. del BTC_USDT <43000",
+				"",
+				"查看监控",
+				"list all coins",
+			})
 		}
 
 		// utils.PushMessage()
