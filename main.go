@@ -103,9 +103,11 @@ func main() {
 				// 添加监听
 				rdb.SAdd("HBPairs:"+commands[1], commands[2])
 				spotWs.SubscribeTicker(goex.NewCurrencyPair2(commands[1]))
+				utils.PushMessage([]string{"命令执行成功"})
 
 			case "del":
 				rdb.SRem("HBPairs:"+commands[1], commands[2])
+				utils.PushMessage([]string{"命令执行成功"})
 
 			case "list":
 				monitors := []string{}
